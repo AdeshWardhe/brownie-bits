@@ -111,7 +111,7 @@ http://localhost:8001
 
 ## 🙏 Credits
 
-This project was inspired by and learned from a video tutorial by  ```**Piyush Garg**``` .
+This project was inspired by and learned from a video tutorial by  **```Piyush Garg```** .
 
 His tutorial gave me the foundation to understand the backend logic — such as working with  **Express routes, MongoDB with Mongoose, and generating short IDs with Nanoid** .
 
