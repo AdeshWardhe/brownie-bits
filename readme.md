@@ -29,6 +29,18 @@ This project was created as a way to learn backend development using **Node.js +
 
 ---
 
+
+## 📸 Screenshot
+
+Here’s how the project looks in action:
+
+![Brownie Bits Screenshot](./public/screenshot.jpg)
+
+The frontend has a **brownie-inspired design** — simple, clean, and made to give a cozy “home-baked” feel to the project.
+
+
+---
+
 ## 📂 Project Structure
 
 ```
