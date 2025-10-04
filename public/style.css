@@ -1,0 +1,162 @@
+/* --- BROWIE COLOR PALETTE --- */
+:root {
+  --color-cocoa: #4F301F; /* Deep Fudgy Brown (Container) */
+  --color-rich-brown: #8B4513; /* Earthy Background Brown (Body) */
+  --color-caramel: #C19A6B; /* Chewy Edge/Accent (Buttons, Borders) */
+  --color-cream: #F5F5DC; /* Creamy Text/Highlight (Input Background) */
+  --color-crinkle: #301E17; /* Darker Shadow for "Crinkle-Top" */
+}
+
+/* --- BASE STYLES --- */
+body {
+  font-family: 'Arial', sans-serif;
+  /* Radial gradient for a subtle vignette effect, focusing light on the center */
+  background: radial-gradient(circle at center, #A0522D 0%, var(--color-rich-brown) 100%);
+  color: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* --- CONTAINER (The Brownie Block) --- */
+.container {
+  background-color: var(--color-cocoa); 
+  padding: 40px 60px;
+  border-radius: 12px; 
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* SMOOTH TRANSITION */
+  
+  /* Simulating the BROWINE CRINKLE-TOP */
+  border: 4px solid var(--color-crinkle);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7); /* Darker, more pronounced shadow */
+}
+
+.container:hover {
+  transform: translateY(-5px); /* COOL: Container lifts up slightly on hover */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.9);
+}
+
+/* --- TEXT STYLES --- */
+h1 {
+  color: var(--color-caramel);
+  margin-bottom: 5px;
+  font-size: 2.5em;
+  text-shadow: 3px 3px var(--color-crinkle); /* Slightly heavier shadow for depth */
+}
+
+/* --- INPUT GROUP --- */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#urlInput {
+  flex-grow: 1;
+  padding: 15px;
+  border: 2px solid var(--color-caramel);
+  border-radius: 8px;
+  background-color: var(--color-cream);
+  color: var(--color-cocoa);
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+#urlInput:focus {
+  border-color: #D2B48C; /* Highlight border on focus */
+  outline: none;
+}
+
+/* --- BUTTON STYLES (Bake It Short) --- */
+#shortenBtn {
+  background-color: var(--color-caramel);
+  color: var(--color-cocoa);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s; /* Added shadow transition */
+  box-shadow: 0 4px 0 var(--color-crinkle); /* Gives a nice 3D pressable look */
+}
+
+#shortenBtn:hover {
+  background-color: #D2B48C; 
+  transform: translateY(-3px); /* Lifts higher on hover */
+  box-shadow: 0 6px 0 var(--color-crinkle); /* Shadow drops lower */
+}
+
+#shortenBtn:active {
+  transform: translateY(0); /* Button presses down */
+  box-shadow: 0 2px 0 var(--color-crinkle); /* Shadow disappears on press */
+}
+
+/* --- RESULT BOX (The Shortened Link) --- */
+.result-box {
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px dashed var(--color-caramel); 
+  border-radius: 8px;
+  min-height: 20px;
+  color: var(--color-cream);
+  font-weight: bold;
+  text-align: left;
+  word-break: break-all; 
+  /* Remove text-decoration and transition from previous duplicate */
+}
+.result-box a {
+  color: var(--color-caramel);
+  text-decoration: none;
+}
+.result-box a:hover {
+  text-decoration: underline;
+}
+
+/* --- FOOTER --- */
+footer {
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9em;
+}
+
+/* New wrapper for the short link and the copy button */
+.result-container {
+  display: flex;
+  align-items: stretch; /* Makes the result box and button the same height */
+  margin-top: 20px;
+  gap: 20px; /* Space between the link box and button */
+}
+
+
+
+/* --- COPY BUTTON --- */
+.copy-btn {
+  background-color: var(--color-cream); /* Creamy/White Chocolate look */
+  color: var(--color-cocoa);
+  border: none;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor:pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2); /* Soft shadow */
+  flex-shrink: 0; /* Prevents the button from shrinking on small screens */
+}
+
+.copy-btn:hover {
+  background-color: #E0E0E0; /* Slightly darker cream on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.copy-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
